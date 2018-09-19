@@ -20,16 +20,10 @@
 				top: 0px;
 				left:0;
 				width:100%;
-				text-align: center;	
-				height: 100px;
-				position:fixed; 	
+				text-align: center;
+				position:fixed;
+				z-index: 5;
 			}
-/* 			 div#menu{
-				position: absolute; top: 110px;
-				width:100%;
-				text-align: center;	
-				height: 120px;					
-			}  */
 			div#body{
 				position: absolute; 
 				top: 300px;
@@ -69,9 +63,6 @@
 		<div id="top">
 			<tiles:insertAttribute name="header"/>
 		</div>
-<%-- 		<div id="menu">
-			<tiles:insertAttribute name="menu"/>
-		</div> --%>
 		<div id="body">
 			<tiles:insertAttribute name="body"/>
 		</div>

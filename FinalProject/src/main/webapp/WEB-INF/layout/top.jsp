@@ -11,12 +11,26 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  
+  <script type="text/javascript">
+	$(function(){
+		$("#playlist").click(function(){
+			$("#mylist").slideToggle('fast');
+		});
+	});
+  </script>
   <style>
   .fakeimg {
-      height: 200px;
-      background: #aaa;
+  height: 200px;
+  background: #aaa;
   }
+  #mylist {
+  right:0%;
+  width:350px;
+  background: #D9E5FF;
+  z-index: 1;
+  margin-top:65px;
+  }
+  #menunav {z-index: 5;}
   </style>
 </head>
 <body>
@@ -26,7 +40,7 @@
   <p>시대의명곡을 무료로즐기자!</p> 
 </div>
 
-<nav class="navbar navbar-dark bg-dark">
+<nav class="navbar navbar-dark bg-dark" id="menunav">
   <a class="navbar-brand" href="#">시대별명곡</a>
   <a class="navbar-brand" href="#">음원방송정보</a>
   <a class="navbar-brand" href="#">실시간음원순위</a>
@@ -34,30 +48,25 @@
   <a class="navbar-brand" href="#">추천곡게시판</a>
   <a class="navbar-brand" href="#">오류신고게시판</a>
   <a class="navbar-brand" href="#">미정</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" id="playlist">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+  <!-- <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
   
     </ul>
-  </div>  
+  </div> -->
+  <div id="mylist" style="display: none; position: absolute; ">
+	<ul>
+	<li>list1</a></li>
+	<li>list2</li>
+	<li>list3</li>
+	</ul>
+  </div>
 </nav>
-
-
-
-
-
 
 </body>
 </html>
-
-
-
-
-
-
-
 
 <%-- <!DOCTYPE html>
 
@@ -83,10 +92,3 @@
 	</body>
 </html>
  --%>
-
-
-
-
-
-
-
